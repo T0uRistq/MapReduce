@@ -2,7 +2,8 @@
 This is C++ implementation of distributed MapReduce
 
 ## Compilation
-g++ -pthread -g ./wordcount.cpp -o ./wordcount
+g++ -std=c++17 -g {source file} -o {binary file}
 
 ## Running
-./wordcount file1 file2 ..
+./mapreduce map "path_to_map_script" src_file dst_file
+./mapreduce reduce "path_to_reduce_script" src_file dst_file
